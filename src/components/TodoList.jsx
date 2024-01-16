@@ -5,7 +5,12 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 
 const TodoList = ({ task, deleteTodo }) => {
 
-  const [doneTask, setDoneTask] = useState(false)
+  const idValue = localStorage.getItem(task.id);
+  const [doneTask, setDoneTask] = useState(JSON.parse(idValue) || false);
+
+  useEffect(() => {
+    localStorage.setItem(task.id, JSON.stringify(doneTask));
+  }, [doneTask, task.id]);
   
   return (
     <div className="w-full border-2 border-[#222] px-[15px] py-[10px] rounded-[10px] mt-[10px] flex items-center justify-between">

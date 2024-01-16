@@ -17,6 +17,7 @@ const Container = () => {
 
  const deleteTodo = (taskId) => {
   const updatedTodo = todo.filter((task) => task.id !== taskId)
+  localStorage.removeItem(taskId)
 
   setTodo(updatedTodo)
  }
