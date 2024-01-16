@@ -20,7 +20,7 @@ const TodoList = ({ task, deleteTodo }) => {
             onClick={() => setDoneTask(!doneTask)}
           />)
         }
-        <p className={`text-[24px] relative after:ease-linear after:duration-300 after:h-[2px] after:bg-[#555] after:top-1/2 after:-left-[2px] after:-translate-y-[50%] after:absolute ${doneTask ? 'text-[#555] after__line' : 'text-[#222] after:w-[0%]'}`} >{task.text}</p>
+        <p className={`text-[24px] ${doneTask ? 'line-through text-[#757575]' : 'none'}`} >{task.text}</p>
       </div>
       <div className="flex items-center">
         <RiDeleteBinLine
