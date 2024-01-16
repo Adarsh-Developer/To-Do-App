@@ -26,7 +26,7 @@ const Container = () => {
  }, [todo]);
 
  return (
-  <div className="bg-white mx-auto max-w-[90vw] min-h-[90vh] rounded-[20px] p-[30px]">
+  <div className="bg-white mx-auto max-w-[90vw] min-h-[90vh] rounded-[20px] px-[20px] py-[30px] sm:p-[30px]">
    <div className="flex items-center">
     <TiTick className="sm:text-[40px] text-[30px] border-[5px] border-black rounded-full mr-[10px]" />
     <h1 className="font-[600] text-[30px] text-black sm:text-[40px]">Get Stuff Done...</h1>
